@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+
+<title>Ride-Care Demo Firebase</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div> <h1> TEST SCRIPT </h1> </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBNKDQxtZjk6S7NwtlK0xgNT64ZDh3nx9s",
+    authDomain: "ride-care-7c85d.firebaseapp.com",
+    databaseURL: "https://ride-care-7c85d.firebaseio.com",
+    storageBucket: "ride-care-7c85d.appspot.com",
+    messagingSenderId: "625233184128"
+  };
+  firebase.initializeApp(config);
+
+// Firebase information
+// Public-facing name help_outline Ride-Care
+// Project ID help_outline ride-care-7c85d
+// Web API Key AIzaSyBNKDQxtZjk6S7NwtlK0xgNT64ZDh3nx9s 
+// https://ride-care-7c85d.firebaseio.com/ 
+
+    // Create a variable to reference the database
+var database = firebase.database();
+
+// load data into firebase
+firebase.database().ref('users/').push({
+     'user': 'nico',
+    'password': 'nico',
+    'ringType': 'A'
+  });
+
+firebase.database().ref('users/').push({
+     'user': 'therese',
+    'password': 'therese',
+    'ringType': 'B'
+  });
+
+firebase.database().ref('users/').push({
+    'user': 'tom',
+    'password': 'tom',
+    'ringType': 'C'
+  });
+
+firebase.database().ref('users/').push({
+    'user': 'yen',
+    'password': 'yen',
+    'ringType': 'D'
+  });
+
+  </script>
+
+</body>
+
+</html>
