@@ -1,0 +1,9 @@
+body {
+    background: url(images/location.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+.logo img {width: 60%;
+	height: 60%;
+}
