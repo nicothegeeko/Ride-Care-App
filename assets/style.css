@@ -4,6 +4,9 @@ body {
     
 }
 
-.logo img {width: 60%;
+.logo img {
+	width: 60%;
 	height: 60%;
 }
+
+#dropdown2 {padding-top: 10px;}
