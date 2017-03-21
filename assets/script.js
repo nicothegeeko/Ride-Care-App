@@ -18,10 +18,13 @@ function busRoute() {
     
     $("#dropdown1").hide();
     $("#dropdown2").hide();
+    $("#soundDropdown").hide();
 
     $(".btn").click(function(){
         $(".container").hide({left: '250px'});
         $("#soundDropdown").show();
+        $("#dropdown1").show();
+        $("#dropdown2").show();
         $("#soundDropdown").animate({left: '250px'});
     });
 
