@@ -110,11 +110,40 @@
             </div>
         </div>
     </div>
+
+<!-- Google Maps Display Section -->
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Transit layer</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+
+
+
 </body>
 <!-- Script -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 <script type="text/javascript" src="assets/firebase.js"></script>
 <script type="text/javascript" src="assets/script.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_FJDkeIk0vscjfi6qCZpFRvx6k8uWcgc&callback=initMap">
+    </script>
 
 </html>
