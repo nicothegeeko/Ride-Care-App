@@ -7,30 +7,40 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  // Create a variable to reference the database
+var database = firebase.database();
+
+
 // Firebase information
 // Public-facing name help_outline Ride-Care
 // Project ID help_outline ride-care-7c85d
 // Web API Key AIzaSyBNKDQxtZjk6S7NwtlK0xgNT64ZDh3nx9s 
 // https://ride-care-7c85d.firebaseio.com/ 
 
-// Create a variable to reference the database
-var database = firebase.database();
+var isUserValid = function() {
+  console.log('----- running isUserValid function -----');
+
+var form = document.getElementById('userInputForm');
+
+var userInput = form.elements.username.value;    // Select username entered
+var passwordInput = form.elements.password.value; // Select password entered
+
+var userOK = false;  // initialize Boolean variable
 var ref = database.ref("users");
 
 // VERIFY USER INFORMATION
-var userInput = prompt('enter user name: ');
-var passwordInput = prompt('enter password: ')
+// var userInput = prompt('enter user name: '); // used in testing only
+// var passwordInput = prompt('enter password: ')  // used in testing only
 
 // var userInput = 'tom'; // used for testing
 // var passwordInput = 'tom';  // used for testing
 
+// initialize Boolean variables
 var userValid = false;
 var passwordValid = false;
 
 var thisUserValid = false;
 var thisPasswordValid = false;
-
-var userOK = false;
 
 ref.on('value', function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
@@ -64,6 +74,15 @@ ref.on('value', function(snapshot) {
     console.log('passwordValid: ', passwordValid);
     if (userValid && passwordValid) {
       userOK = true;
+      console.log('User OK?', userOK);
+      console.log('--------------------------');
+      return true;
     }
-    console.log('User OK?', userOK);
+    else {
+      userOK = false;
+      console.log('User OK?', userOK);
+      console.log('--------------------------');
+      return false;
+    }
 });
+};
