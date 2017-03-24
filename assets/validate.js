@@ -46,26 +46,26 @@ ref.on('value', function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
     var userData = childSnapshot.val();
     console.log('user: ', userData.user);
-    console.log('password: ', userData.password)
+    console.log('password: ', userData.password);
     if (userInput === userData.user) {
       thisUserValid = true;
       userValid = true;
-      console.log('this user valid?', thisUserValid)
+      console.log('this user valid?', thisUserValid);
       if (passwordInput === userData.password) {
           passwordValid = true;
           thisPasswordValid = true;
-          console.log('this password valid? ', thisPasswordValid)
-      };
+          console.log('this password valid? ', thisPasswordValid);
+      }
       else {
           thisPasswordValid = false;
-          console.log('this password valid? ', thisPasswordValid)
+          console.log('this password valid? ', thisPasswordValid);
       }
     }
     else {
       thisUserValid = false;
       thisPasswordValid = null;
       console.log('this user valid?', thisUserValid);
-      console.log('this password valid? ', thisPasswordValid)
+      console.log('this password valid? ', thisPasswordValid);
     }  
   });
     // alert('check user and password now'); 

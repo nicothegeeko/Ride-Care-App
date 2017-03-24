@@ -15,7 +15,7 @@ function busRoute() {
   
 }
 
-if (thisPasswordValid = true thisUserValid = true) {
+if (isuserValid()) {
           // passwordValid = true;
           // thisUserValid = true;
           // thisPasswordValid = true;
@@ -31,11 +31,7 @@ if (thisPasswordValid = true thisUserValid = true) {
           console.log('this password valid? ', thisPasswordValid)
       }
 
-      else {
-          thisPasswordValid = false;
-          thisUserValid = false;
-          console.log('this password valid? ', thisPasswordValid)
-      };
+      //
     
     // else {
     //   thisUserValid = false;
