@@ -8,38 +8,8 @@ var config = {
 
 firebase.initializeApp(config);
 
-<<<<<<< HEAD
   // Create a variable to reference the database
 var database = firebase.database();
-=======
-          console.log('this password valid? ', thisPasswordValid)
-      }
-
-<<<<<<< HEAD
-    //AIzaSyCkV6mjFSLSVwZajhV4fWy-76XUHtzEW1E
-=======
-      else {
-          thisPasswordValid = false;
-          thisUserValid = false;
-          console.log('this password valid? ', thisPasswordValid)
-      };
-    
-    // else {
-    //   thisUserValid = false;
-    //   thisPasswordValid = null;
-    //   console.log('this user valid?', thisUserValid);
-    //   console.log('this password valid? ', thisPasswordValid)
-    // }  
->>>>>>> 64e954965a91a167ca54958e5f1c32e935a7f430
-
-  
-    
-    $("#dropdown1").hide();
-    $("#dropdown2").hide();
-    $("#soundDropdown").hide();
-    
-    
->>>>>>> 0d7f63f78e1bdcfa4d18dd24de6bf501ff029d21
 
 
 // Firebase information
@@ -135,8 +105,7 @@ $("#sign-in-submit").click(function(event){
 //hide the dropdown menu 
 $("#dropdown1").hide();
     $("#dropdown2").hide();
-    $("#soundDropdown").hide();    
-
+    $("#soundDropdown").hide();  
 
 
 
