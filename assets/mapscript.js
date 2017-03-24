@@ -1,4 +1,4 @@
-visualRefresh = true; 
+// visualRefresh = true; 
 
 var routeData;  // defined for global scope
 
@@ -7,28 +7,30 @@ var validRoute = ['2', '92', '180', '780'];
 var validRouteSet = new Set(validRoute);
 
 function initMap() {
-    var latlngLA = new google.maps.LatLng(34.0397099,-118.55429);
-    var settings = {
-    zoom: 15,
-    center: latlngLA, 
+  // initial map center based on LA 34.052235, -118.243683
+  var settings = {
+    zoom: 14,
+    center: new google.maps.LatLng(34.052235,-118.243683), 
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  var map = new google.maps.Map(document.getElementById('map'), settings)
+    var map = new google.maps.Map(document.getElementById('map'), settings); 
 };
 
-// var minLatitude = 33.0;
-// var maxLatitude = 34.2;
-// var minLongitude = -118.56;
-// var maxLongitude = -118.25;
-  // var southWest = new google.maps.LatLng(minLatitude, minLongitude);
-  // var northEast = new google.maps.LatLng(maxLatitude, maxLongitude);
-  // var bounds = new google.maps.LatLngBounds(southWest,northEast);
-   // map.fitBounds(bounds);
-
-
-// fitBounds(bounds:LatLngBounds|LatLngBoundsLiteral)
-
-// initial map center based on LA 
+function routeMap() {
+  // route map center based on latitude and longitude arrays
+  var minLatitude = Math.min.apply(null, routeData.latitude);
+  var maxLatitude = Math.max.apply(null, routeData.latitude);
+  var minLongitude = Math.min.apply(null, routeData.longitude);
+  var maxLongitude = Math.max.apply(null, routeData.longitude);
+  var centerLatitude = (maxLatitude + minLatitude)/2;
+  var centerLongitude = (maxLongitude + minLongitude)/2;
+  var settings = {
+    zoom: 14,
+    center: new google.maps.LatLng(centerLatitude,centerLongitude), 
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById('map'), settings);
+};
 
 
 // ++++++++++++++++++++
@@ -117,13 +119,39 @@ $('#routeSelect').change(function routeChange() {
       $("#floating-panel-endSelect").append('<option value="' + routeData.stop[i] + '">' + routeData.stop[i] + '</option>');
     }
     $("#floating-panel-endSelect").append("</select>");
-     
+ 
+// routeMap();
+
+ /*    
     // determine the bounding box for the map based on route latitude and longitude arrays
-    minLatitude = Math.min(routeData.latitude);
-    maxLatitude = Math.max(routeData.latitude);
-    minLongitude = Math.min(routeData.longitude);
-    maxLongitude = Math.max(routeData.longitude);
+    var minLatitude = Math.min.apply(null, routeData.latitude);
+    var maxLatitude = Math.max.apply(null, routeData.latitude);
+    var minLongitude = Math.min.apply(null, routeData.longitude);
+    var maxLongitude = Math.max.apply(null, routeData.longitude);
+
+    var centerLatitude = (maxLatitude + minLatitude)/2;
+    var centerLongitude = (maxLongitude + minLongitude)/2;
+    console.log("bounding box defined");
+    console.log(minLatitude);
+
     var bounds = new google.maps.LatLngBounds();
+    console.log("google map bounds");
+    console.log(bounds);
+
+    bounds.extend(new google.maps.LatLng(minLatitude, minLongitude)); // southwest corner
+    bounds.extend(new google.maps.LatLng(maxLatitude, maxLongitude)); // northeast corner
+
+    // update map for the selected route 
+    var latlngRoute = new google.maps.LatLng(centerLatitude, centerLongitude);
+    var settings = {
+    zoom: 15,
+    center: latlngRoute, 
+    mapTypeId: google.maps.MapTypeId.ROADMAP};
+    var map = new google.maps.Map(document.getElementById('map'), settings);
+
+ */   
+ //   map.fitBounds(bounds);
+
 
 
     // redraw the map based on the bounding box and the stop points for the seleced route

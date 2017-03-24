@@ -16,10 +16,10 @@
         margin: 0;
         padding: 0;
       }
-      #floating-panel {
+       #floating-panel-routes {
         position: absolute;
-        top: 10px;
-        left: 25%;
+        top: 10%;
+        left: 5%;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -29,19 +29,44 @@
         line-height: 30px;
         padding-left: 10px;
       }
-  
+      #floating-panel-startSelect {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #floating-panel-endSelect {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
   </style>
   </head>
   <body>
     
   <div id="floating-panel-routes">
-    <b class="routeSelectInfo">Bus Route Number: </b>
-    <select class="routeSelectInfo" id="routeSelect">
-      <option class="routeSelectInfo" value=""></option>
-      <option class="routeSelectInfo" value="2">2</option>
-      <option class="routeSelectInfo" value="92">92</option>
-      <option class="routeSelectInfo" value="180">180</option>
-      <option class="routeSelectInfo" value="780">780</option>
+    <b >Bus Route Number: </b>
+    <select id="routeSelect">
+      <option value=""></option>
+      <option value="2">2</option>
+      <option value="92">92</option>
+      <option value="180">180</option>
+      <option value="780">780</option>
     </select>
     <!-- <b>Current Stop: </b> -->
     <!-- <select id="startSelect"> -->
