@@ -2,12 +2,13 @@ visualRefresh = true;
 
 var routeData;  // defined for global scope
 
+
 // define set of tested routes for the application
 var validRoute = ['2', '92', '180', '780'];
 var validRouteSet = new Set(validRoute);
 
 function initMap() {
-  var latlng = new google.maps.LatLng(34.0397099,-118.55429);
+  var latlng = new google.maps.LatLng(34.052235, -118.243683);
   var settings = {
     zoom: 15,
     center: latlng,
@@ -24,6 +25,7 @@ function businfo(route) {
   var stop = [];
   var latitude = [];
   var longitude = [];
+  var routeTwo = [];
 
   $.ajax({
     url: queryURL,
@@ -33,6 +35,12 @@ function businfo(route) {
       stop.push(response.items[i].display_name);
       latitude.push(response.items[i].latitude);
       longitude.push(response.items[i].longitude);
+
+      $("#startSelect").append("<option value=''>" + response.items[i].display_name + "</option>");
+      $("#endSelect").append("<option value=''>" + response.items[i].display_name + "</option>");
+
+      // console.log(stop);
+
     };
   }); 
   var thisRouteData = {'stop': stop, 'latitude': latitude, 'longitude': longitude};  
@@ -73,7 +81,5 @@ $('#routeSelect').change(function routeChange() {
   } // end of major if-block for running of the app
 
 });
-
-
 
 
