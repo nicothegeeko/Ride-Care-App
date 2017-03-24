@@ -14,110 +14,29 @@ function busRoute() {
   
   
 }
-
-if (thisPasswordValid = true thisUserValid = true) {
-          // passwordValid = true;
-          // thisUserValid = true;
-          // thisPasswordValid = true;
-
-          
-        $(".container").hide({left: '250px'});
-        $("#soundDropdown").show();
-        $("#dropdown1").show();
-        $("#dropdown2").show();
-        $("#soundDropdown").animate({left: '250px'});
-        $("#logIn-form").hide();
-
-          console.log('this password valid? ', thisPasswordValid)
-      }
-
-      else {
-          thisPasswordValid = false;
-          thisUserValid = false;
-          console.log('this password valid? ', thisPasswordValid)
-      };
-    
-    // else {
-    //   thisUserValid = false;
-    //   thisPasswordValid = null;
-    //   console.log('this user valid?', thisUserValid);
-    //   console.log('this password valid? ', thisPasswordValid)
-    // }  
-
   
     
     $("#dropdown1").hide();
     $("#dropdown2").hide();
     $("#soundDropdown").hide();
-    
-    
 
-    // $(".btn").click(function(){
-    //     $(".container").hide({left: '250px'});
-    //     $("#soundDropdown").show();
-    //     $("#dropdown1").show();
-    //     $("#dropdown2").show();
-    //     $("#soundDropdown").animate({left: '250px'});
-    //     $("#logIn-form").hide();
-       
-
-
-    // });
-
-    //$(".btn").click (function load() 
-    //{ 
-        //var mapDiv = document.getElementById("map");
-
-      //});
+    $(".btn").click(function(){
+        $(".container").hide({left: '250px'});
+        $("#soundDropdown").show();
+        $("#dropdown1").show();
+        $("#dropdown2").show();
+        $("#soundDropdown").animate({left: '250px'});
+    });
 
     $(".dropdown-toggle").dropdown();
-
 });
-    // AIzaSyCkV6mjFSLSVwZajhV4fWy-76XUHtzEW1E
 
-// Initiate Map to display google maps
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 34.052235, lng: -118.243683}
-        });
+var baseUrl = "assets/images/";
+var audio = ["alarm.mp3", "buzzer.mp3", "siren.mp3"];
 
-        var infoWindow = new google.maps.InfoWindow({map: map});
-
-
-        // Condition to grab user  geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-
-        // if browser doesn't support geolocation it will show an error
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-
-        // Display Transit layer for LA bus route
-        var transitLayer = new google.maps.TransitLayer();
-        transitLayer.setMap(map);
-      }
-
-  
-
+$('li.ci').click(function() {
+    var i = $(this).attr('id').substring(1);
+    new Audio(baseUrl + audio[i-1]).play();
+});
 
 
