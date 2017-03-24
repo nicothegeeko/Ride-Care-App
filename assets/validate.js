@@ -55,7 +55,7 @@ ref.on('value', function(snapshot) {
           passwordValid = true;
           thisPasswordValid = true;
           console.log('this password valid? ', thisPasswordValid)
-      };
+      }
       else {
           thisPasswordValid = false;
           console.log('this password valid? ', thisPasswordValid)

@@ -15,7 +15,7 @@ function busRoute() {
   
 }
 
-if (thisPasswordValid = true thisUserValid = true) {
+if (isUserValid()) {
           // passwordValid = true;
           // thisUserValid = true;
           // thisPasswordValid = true;
