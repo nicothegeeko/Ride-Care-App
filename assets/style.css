@@ -7,6 +7,16 @@ body {
 .logo img {
 	width: 60%;
 	height: 60%;
+	padding-left:30%;
 }
 
-#dropdown2 {padding-top: 10px;}
+#menu div {
+	padding-top: 6px;
+	padding-left: 19%;
+}
+
+#mapSection {height: 80%;}
+
+
+
+
