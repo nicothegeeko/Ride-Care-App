@@ -11,30 +11,47 @@
   //     console.log('lskfjlksdjf', err)
   //   })
   
-    var queryURL = "https://api.metro.net/agencies/lametro/routes/180/";
+  // var queryURL = "https://api.metro.net/agencies/lametro/routes/180";
 
-    $.ajax ({
-      url: queryURL,
-      method:"GET"
-    }).done(function(response){
+  var queryURL = "http://api.metro.net/agencies/lametro/routes/180/stops/";
 
-      console.log(response);
-      var results = response.data;
-    });
+  $.ajax ({
+    url: queryURL,
+    method:"GET"
+  }).done(function(response){
+
+    console.log(response);
+
+    var results = response.items;
+
+    // var route = response.display_name;
+
+    // $("#test").prepend(route);
+
+
+    for (var i = 0; i < 10; i++) {
+      var route = results[i].display_name;
+      // var route = response[i].display_name;
+      $("#test").prepend(route);
+
+    }
+
+
+  });
   
 
   
-// $(document).ready(function() {
+$(document).ready(function() {
     
-//     $(".dropdown").hide();
+    $(".dropdown").hide();
 
-//     $(".btn").click(function(){
-//         $(".container").hide({left: '250px'});
-//         $(".dropdown").show();
-//         $(".dropdown").animate({left: '250px'});
-//     });
+    $(".btn").click(function(){
+        $(".container").hide({left: '250px'});
+        $(".dropdown").show();
+        $(".dropdown").animate({left: '250px'});
+    });
 
-//     $(".dropdown-toggle").dropdown();
-// });
+    $(".dropdown-toggle").dropdown();
+});
 
 
