@@ -14,19 +14,61 @@ function busRoute() {
   
   
 }
-  
-    
-    $("#dropdown1").hide();
-    $("#dropdown2").hide();
-    $("#soundDropdown").hide();
 
-    $(".btn").click(function(){
+if (thisPasswordValid = true thisUserValid = true) {
+          // passwordValid = true;
+          // thisUserValid = true;
+          // thisPasswordValid = true;
+
+          
         $(".container").hide({left: '250px'});
         $("#soundDropdown").show();
         $("#dropdown1").show();
         $("#dropdown2").show();
         $("#soundDropdown").animate({left: '250px'});
-    });
+        $("#logIn-form").hide();
+
+          console.log('this password valid? ', thisPasswordValid)
+      }
+
+      else {
+          thisPasswordValid = false;
+          thisUserValid = false;
+          console.log('this password valid? ', thisPasswordValid)
+      };
+    
+    // else {
+    //   thisUserValid = false;
+    //   thisPasswordValid = null;
+    //   console.log('this user valid?', thisUserValid);
+    //   console.log('this password valid? ', thisPasswordValid)
+    // }  
+
+  
+    
+    $("#dropdown1").hide();
+    $("#dropdown2").hide();
+    $("#soundDropdown").hide();
+    
+    
+
+    // $(".btn").click(function(){
+    //     $(".container").hide({left: '250px'});
+    //     $("#soundDropdown").show();
+    //     $("#dropdown1").show();
+    //     $("#dropdown2").show();
+    //     $("#soundDropdown").animate({left: '250px'});
+    //     $("#logIn-form").hide();
+       
+
+
+    // });
+
+    //$(".btn").click (function load() 
+    //{ 
+        //var mapDiv = document.getElementById("map");
+
+      //});
 
     $(".dropdown-toggle").dropdown();
 
