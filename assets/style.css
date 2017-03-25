@@ -1,5 +1,5 @@
 body {
-    background: url(images/location.jpg) no-repeat center center fixed;
+    background: url(images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     
 }
@@ -14,8 +14,33 @@ body {
 	padding-top: 6px;
 	padding-left: 19%;
 }
+#map {
+        height: 100%;
+        width: 80%;
+        margin-right: 10%;
+        margin-left:10%;
 
-#mapSection {height: 80%;}
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: relative;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        float: left;
+      }
 
 
 
