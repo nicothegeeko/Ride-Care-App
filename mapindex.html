@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <title>Ride-Care Map</title>
     <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">
-    <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry&sensor=false&language=en"></script> -->
-    <!-- <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker.js"></script> -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALzyX7SYtWs0sPy0CccW9zTzroy_U5yA0&callback=initMap">
   </script>
@@ -74,22 +72,20 @@
       <option value="180">180</option>
       <option value="780">780</option>
     </select>
-    <!-- <b>Current Stop: </b> -->
-    <!-- <select id="startSelect"> -->
-      <!-- <option value=""></option> -->
-      <!-- NEED TO APPEND TO startSelect LIST OF OPTIONS ALL THE STOPS FOR SELECTED ROUTE -->
-    </select>
-    <!-- <b>Destination: </b> -->
-    <!-- <select id="endSelect"> -->
-      <!-- <option value=""></option> -->
-      <!-- NEED TO APPEND TO endSelect LIST OF OPTIONS ALL THE STOPS FOR SELECTED ROUTE -->
-    <!-- </select> -->
   </div>
 
   <div id="floating-panel-startSelect">
+      <b >Current Stop: </b>
+  <select id="startSelect">
+  <option value=""></option>
+  </select>
   </div>
 
   <div id="floating-panel-endSelect">
+  <b>Destination: </b>
+  <select id="endSelect">
+  <option value=""></option>
+  </select>
   </div>
 
   <div id="map"></div>

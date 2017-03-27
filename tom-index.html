@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Ride-Care Map</title>
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">
+       <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALzyX7SYtWs0sPy0CccW9zTzroy_U5yA0&callback=initMap">
+  </script>
+
+ 
+    <title>Ride-Care</title>
+</head>
+
+<body class>
+    <div id="main-section">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-5">
+                <div class="logo">
+                    <img src="assets/images/bus-logo.svg">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="panel panel-default" id="logIn-form">
+                        <div class="panel-heading">
+                            <strong class="">Login</strong>
+                        </div>
+                        <div class="panel-body">
+                            <form id="userInputForm" class="form-horizontal" role="form" 
+                                onsubmit = "return isUserValid()">
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="username" placeholder="Username" autofocus required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <div class="checkbox">
+                                            <label class="">
+                                                <input type="checkbox" class="">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group last">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                                        <button type="reset" autofocus = "username" class="btn btn-default btn-sm">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">Not Registered? <a href="#" class="">Register here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="soundDropdown">
+                <div class="row">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose Sound
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sound 1</a></li>
+                            <li><a href="#">Sound 2</a></li>
+                            <li><a href="#">Sound 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+   <div id="floating-panel-routes">
+    <b >Bus Route Number: </b>
+    <select id="routeSelect">
+      <option value=""></option>
+      <option value="2">2</option>
+      <option value="92">92</option>
+      <option value="180">180</option>
+      <option value="780">780</option>
+    </select>
+  </div>
+
+  <div id="floating-panel-startSelect">
+      <b >Current Stop: </b>
+  <select id="startSelect">
+  <option value=""></option>
+  </select>
+  </div>
+
+  <div id="floating-panel-endSelect">
+  <b>Destination: </b>
+  <select id="endSelect">
+  <option value=""></option>
+  </select>
+  </div>
+
+ 
+<!-- Google Maps Display Section -->
+
+<div id="mapSection" class="col-md-4 col-md-offset-4">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <div id="map" ></div>
+    </div>
+
+
+
+
+</body>
+<!-- Script -->
+    <!-- Jquery, Bootstrap, Firebase, Google Maps.... -->
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script type="text/javascript" src="assets/validate.js"></script>
+<script type="text/javascript" src="assets/script.js"></script>
+ <script type="text/javascript" src="assets/setFunctions.js"></script>
+  <script type="text/javascript" src="assets/mapscript.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_FJDkeIk0vscjfi6qCZpFRvx6k8uWcgc&callback=initMap">
+</script>
+
+
+</html>
