@@ -1,21 +1,3 @@
-visualRefresh = true; 
-
-var routeData;  // defined for global scope
-
-// define set of tested routes for the application
-var validRoute = ['2', '92', '180', '780'];
-var validRouteSet = new Set(validRoute);
-
-function initMap() {
-  var latlng = new google.maps.LatLng(34.0397099,-118.55429);
-  var settings = {
-    zoom: 15,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById('map'), settings)
-}
-
 // go to the LA Metro API to get bus route information
 function businfo(route) {
   var baseurl = 'http://api.metro.net/agencies/lametro/routes/';
@@ -73,6 +55,7 @@ $('#routeSelect').change(function routeChange() {
   } // end of major if-block for running of the app
 
 });
+
 
 
 
