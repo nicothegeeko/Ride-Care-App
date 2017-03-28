@@ -27,10 +27,11 @@ body {
         margin: 0;
         padding: 0;
       }
-      #floating-panel {
-        position: relative;
-        top: 10px;
-        left: 25%;
+      
+       #floating-panel-routes {
+        position: absolute;
+        top: 10%;
+        left: 5%;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -39,7 +40,6 @@ body {
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
         padding-left: 10px;
-        float: left;
       }
 
 

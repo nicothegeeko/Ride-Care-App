@@ -50,7 +50,7 @@ $("#sign-in-submit").click(function(event) {
         $(".container").hide({ left: '250px' });
         $(".logo").hide();
         $("#soundDropdown").show();
-        $("#floating-panel").show();
+        $("#floating-panel-routes").show();
         $("#soundDropdown").animate({ left: '250px' });
         $("#logIn-form").remove();
         $("#map").show();
@@ -107,7 +107,7 @@ $("#sign-in-submit").click(function(event) {
 
 
 //hide the dropdown menu 
-$("#floating-panel").hide();
+$("#floating-panel-routes").hide();
 $("#soundDropdown").hide();
 $("#map").hide();
 
