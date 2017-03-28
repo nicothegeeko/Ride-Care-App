@@ -50,7 +50,9 @@ $("#sign-in-submit").click(function(event) {
         $(".container").hide({ left: '250px' });
         $(".logo").hide();
         $("#soundDropdown").show();
-        $("floating-panel-routes").show();
+        $("#floating-panel-routes").show();
+        $("#floating-panel-startSelect").show();
+        $("#floating-panel-endSelect").show();
         $("#soundDropdown").animate({ left: '250px' });
         $("#logIn-form").remove();
         $("#map").show();
@@ -108,6 +110,8 @@ $("#sign-in-submit").click(function(event) {
 
 //hide the dropdown menu 
 $("#floating-panel-routes").hide();
+$("#floating-panel-startSelect").hide();
+$("#floating-panel-endSelect").hide();
 $("#soundDropdown").hide();
 $("#map").hide();
 
