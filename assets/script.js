@@ -4,6 +4,145 @@ var config = {
     databaseURL: "https://ride-care-7c85d.firebaseio.com",
     storageBucket: "ride-care-7c85d.appspot.com",
     messagingSenderId: "625233184128"
+<<<<<<< HEAD
+  };
+
+firebase.initializeApp(config);
+
+<<<<<<< HEAD
+  // Create a variable to reference the database
+var database = firebase.database();
+=======
+          console.log('this password valid? ', thisPasswordValid)
+      }
+
+<<<<<<< HEAD
+    //AIzaSyCkV6mjFSLSVwZajhV4fWy-76XUHtzEW1E
+=======
+      else {
+          thisPasswordValid = false;
+          thisUserValid = false;
+          console.log('this password valid? ', thisPasswordValid)
+      };
+    
+    // else {
+    //   thisUserValid = false;
+    //   thisPasswordValid = null;
+    //   console.log('this user valid?', thisUserValid);
+    //   console.log('this password valid? ', thisPasswordValid)
+    // }  
+>>>>>>> 64e954965a91a167ca54958e5f1c32e935a7f430
+
+  
+    
+    $("#dropdown1").hide();
+    $("#dropdown2").hide();
+    $("#soundDropdown").hide();
+    
+    
+>>>>>>> 0d7f63f78e1bdcfa4d18dd24de6bf501ff029d21
+
+
+// Firebase information
+// Public-facing name help_outline Ride-Care
+// Project ID help_outline ride-care-7c85d
+// Web API Key AIzaSyBNKDQxtZjk6S7NwtlK0xgNT64ZDh3nx9s 
+// https://ride-care-7c85d.firebaseio.com/ 
+$("#sign-in-submit").click(function(event){
+  console.log('----- running isUserValid function -----');
+
+  var form = document.getElementById('userInputForm');
+
+  var userInput = form.elements.username.value;    // Select username entered
+  var passwordInput = form.elements.password.value; // Select password entered
+
+  var userOK = false;  // initialize Boolean variable
+  var ref = database.ref("users");
+
+  // VERIFY USER INFORMATION
+  // var userInput = prompt('enter user name: '); // used in testing only
+  // var passwordInput = prompt('enter password: ')  // used in testing only
+
+  // var userInput = 'tom'; // used for testing
+  // var passwordInput = 'tom';  // used for testing
+
+  // initialize Boolean variables
+  var userValid = false;
+  var passwordValid = false;
+
+  var thisUserValid = false;
+  var thisPasswordValid = false;
+
+  if (thisPasswordValid = true);{
+          // passwordValid = true;
+          // thisUserValid = true;
+          // thisPasswordValid = true;
+          
+        $(".container").hide({left: '250px'});
+        $("#soundDropdown").show();
+        $("#dropdown1").show();
+        $("#dropdown2").show();
+        $("#soundDropdown").animate({left: '250px'});
+        $("#logIn-form").remove();
+          console.log('this password valid? ', thisPasswordValid)
+        }
+
+  ref.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var userData = childSnapshot.val();
+      // console.log('user: ', userData.user);
+      // console.log('password: ', userData.password);
+      if (userInput === userData.user) {
+
+        thisUserValid = true;
+        userValid = true;
+        console.log('this user valid?', thisUserValid);
+
+        if (passwordInput === userData.password) {
+            passwordValid = true;
+            thisPasswordValid = true;
+            console.log('this password valid? ', thisPasswordValid);
+        } else {
+            thisPasswordValid = false;
+            console.log('this password valid? ', thisPasswordValid);
+        }
+      } else {
+        thisUserValid = false;
+        thisPasswordValid = null;
+        console.log('this user valid?', thisUserValid);
+        console.log('this password valid? ', thisPasswordValid)
+      }  
+    });
+      // alert('check user and password now'); 
+      console.log('--------------------------');
+      console.log('userValid: ', userValid);
+      console.log('passwordValid: ', passwordValid);
+      if (userValid && passwordValid) {
+        userOK = true;
+        console.log('User OK?', userOK);
+        console.log('--------------------------');
+        return true;
+      }
+      else {
+        userOK = false;
+        console.log('User OK?', userOK);
+        console.log('--------------------------');
+        return false;
+      }
+  });
+
+})
+
+//hide the dropdown menu 
+$("#dropdown1").hide();
+    $("#dropdown2").hide();
+    $("#soundDropdown").hide();    
+
+
+
+
+  
+=======
 };
 
 firebase.initializeApp(config);
@@ -225,6 +364,7 @@ Set.prototype.difference = function(setB) {
 
 });
 
+>>>>>>> 89ce68770832ad7813926adee9814a6877baa415
 
 
 
