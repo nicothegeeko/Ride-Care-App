@@ -16,10 +16,7 @@ body {
 }
 #map {
         height: 100%;
-        width: 80%;
-        margin-right: 10%;
-        margin-left:10%;
-
+        width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
