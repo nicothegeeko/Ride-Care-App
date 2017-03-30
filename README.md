@@ -9,6 +9,8 @@ The Ride-Care repository for the presentation is at https://github.com/tomcali/R
 The gh-pages website for the presentation is at
 
  https://tomcali.github.io/Ride-Care/
+
+ The Ride-Care-App repository, which has the actual application is at https://nicothegeeko.github.io/Ride-Care-App/. 
  
 The presentation is complete and runs in stanalone/self-running mode or in manual mode with controls at the bottom left-hand and right-hand bottom of the screen.
  
