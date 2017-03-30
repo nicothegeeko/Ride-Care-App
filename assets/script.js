@@ -247,7 +247,7 @@ function initMap() {
 
 // go to the LA Metro API to get bus route information
 function businfo(route) {
-  var baseurl = 'http://api.metro.net/agencies/lametro/routes/';
+  var baseurl = 'https://api.metro.net/agencies/lametro/routes/';
   var queryURL = baseurl + route + '/sequence';
   console.log("LA Metro API request: ", queryURL);
   var stop = [];
